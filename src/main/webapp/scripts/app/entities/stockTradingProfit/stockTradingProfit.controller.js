@@ -19,7 +19,7 @@ angular.module('bigstockApp')
         $scope.loadAll();
 
         $scope.create = function () {
-//        	$scope.stockTradingProfit.user=4;
+        	$scope.stockTradingProfit.user.id=4;
             StockTradingProfit.update($scope.stockTradingProfit,
                 function () {
                     $scope.loadAll();

@@ -9,6 +9,16 @@
                 "stockTradingProfit": "StockTradingProfit",
                 "additionalEntity": "JHipster will add addtional entities"
             },
+            "stocks": {
+            	"main": "Stock",	
+            	"hk": "Hong Kong Stock",
+            	"cn": "China Stock"
+            },
+            "funds": {
+            	"main": "Fund",	
+            	"hk": "Hong Kong Fund",
+            	"cn": "China Fund"
+            },
             "account": {
                 "main": "Account",
                 "settings": "Settings",
@@ -97,5 +107,5 @@
             "datetimelocal": "This field should be a date and time."
         }
     },
-    "footer": "This is your footer"
+    "footer": "Copyright © 2015"
 }
