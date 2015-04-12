@@ -1,0 +1,31 @@
+{
+    "bigstockApp": {
+        "stockTradingProfit" : {
+            "home": {
+                "title": "StockTradingProfits",
+                "createLabel": "Create a new StockTradingProfit",
+                "createOrEditLabel": "Create or edit a StockTradingProfit"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete StockTradingProfit {{ id }}?"
+            },
+            "detail": {
+                "title": "StockTradingProfit"
+            },
+            "creationDate": "CreationDate",
+            "code": "Code",
+            "name": "Name",
+            "quantity": "Quantity",
+            "buyPrice": "BuyPrice",
+            "sellPrice": "SellPrice",
+            "buyTransactionFee": "BuyTransactionFee",
+            "sellTransactionFee": "SellTransactionFee",
+            "buyConsideration": "BuyConsideration",
+            "sellConsideration": "SellConsideration",
+            "profit": "Profit",
+            "currency": "Currency",
+            "market": "Market",
+            "user": "user"
+        }
+    }
+}

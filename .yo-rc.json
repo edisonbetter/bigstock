@@ -1,0 +1,19 @@
+{
+  "generator-jhipster": {
+    "baseName": "BigStock",
+    "packageName": "com.greenation.bigstock",
+    "packageFolder": "com/greenation/bigstock",
+    "authenticationType": "session",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": "no",
+    "websocket": "no",
+    "databaseType": "sql",
+    "devDatabaseType": "h2Memory",
+    "prodDatabaseType": "mysql",
+    "useCompass": true,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "javaVersion": "8",
+    "rememberMeKey": "eed361634cecb934cd297ce1f226d66b9888122a"
+  }
+}

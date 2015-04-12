@@ -1,0 +1,176 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "user",
+            "relationshipNameCapitalized": "User",
+            "relationshipFieldName": "user",
+            "otherEntityName": "user",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "User",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "creationDate",
+            "fieldType": "LocalDate",
+            "fieldNameCapitalized": "CreationDate",
+            "fieldNameUnderscored": "creation_date",
+            "fieldInJavaBeanMethod": "CreationDate",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "code",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Code",
+            "fieldNameUnderscored": "code",
+            "fieldInJavaBeanMethod": "Code",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Name",
+            "fieldNameUnderscored": "name",
+            "fieldInJavaBeanMethod": "Name",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "quantity",
+            "fieldType": "BigDecimal",
+            "fieldNameCapitalized": "Quantity",
+            "fieldNameUnderscored": "quantity",
+            "fieldInJavaBeanMethod": "Quantity",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "buyPrice",
+            "fieldType": "BigDecimal",
+            "fieldNameCapitalized": "BuyPrice",
+            "fieldNameUnderscored": "buy_price",
+            "fieldInJavaBeanMethod": "BuyPrice",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "sellPrice",
+            "fieldType": "BigDecimal",
+            "fieldNameCapitalized": "SellPrice",
+            "fieldNameUnderscored": "sell_price",
+            "fieldInJavaBeanMethod": "SellPrice",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 7,
+            "fieldName": "buyTransactionFee",
+            "fieldType": "BigDecimal",
+            "fieldNameCapitalized": "BuyTransactionFee",
+            "fieldNameUnderscored": "buy_transaction_fee",
+            "fieldInJavaBeanMethod": "BuyTransactionFee",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 8,
+            "fieldName": "sellTransactionFee",
+            "fieldType": "BigDecimal",
+            "fieldNameCapitalized": "SellTransactionFee",
+            "fieldNameUnderscored": "sell_transaction_fee",
+            "fieldInJavaBeanMethod": "SellTransactionFee",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 9,
+            "fieldName": "buyConsideration",
+            "fieldType": "BigDecimal",
+            "fieldNameCapitalized": "BuyConsideration",
+            "fieldNameUnderscored": "buy_consideration",
+            "fieldInJavaBeanMethod": "BuyConsideration",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 10,
+            "fieldName": "sellConsideration",
+            "fieldType": "BigDecimal",
+            "fieldNameCapitalized": "SellConsideration",
+            "fieldNameUnderscored": "sell_consideration",
+            "fieldInJavaBeanMethod": "SellConsideration",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 11,
+            "fieldName": "profit",
+            "fieldType": "BigDecimal",
+            "fieldNameCapitalized": "Profit",
+            "fieldNameUnderscored": "profit",
+            "fieldInJavaBeanMethod": "Profit",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 12,
+            "fieldName": "currency",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Currency",
+            "fieldNameUnderscored": "currency",
+            "fieldInJavaBeanMethod": "Currency",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 13,
+            "fieldName": "market",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Market",
+            "fieldNameUnderscored": "market",
+            "fieldInJavaBeanMethod": "Market",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": true,
+    "fieldsContainCustomTime": true,
+    "fieldsContainBigDecimal": true,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150411053444",
+    "pagination": "pagination",
+    "validation": true
+}
