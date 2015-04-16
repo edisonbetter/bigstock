@@ -157,7 +157,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="stockTradingProfit in stockTradingProfits">
+                <tr class="ng-enter-stagger" ng-repeat="stockTradingProfit in stockTradingProfits">
                     <td><a ui-sref="stockTradingProfitDetail({id:stockTradingProfit.id})">{{stockTradingProfit.id}}</a></td>
                     <td>{{stockTradingProfit.creationDate}}</td>
                     <td>{{stockTradingProfit.code}}</td>

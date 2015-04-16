@@ -1,9 +1,9 @@
 'use strict';
 
 angular.module('bigstockApp')
-    .controller('StockTradingProfitController', function ($scope, StockTradingProfit, User, ParseLinks) {
+    .controller('StockTradingProfitController', function ($scope, StockTradingProfit, Principal, ParseLinks) {
         $scope.stockTradingProfits = [];
-        $scope.users = User.query();
+        // $scope.users = User.query();
         $scope.currencyOptions = ["HKD", "CNY"];
         $scope.page = 1;
         $scope.loadAll = function() {
@@ -19,7 +19,7 @@ angular.module('bigstockApp')
         $scope.loadAll();
 
         $scope.create = function () {
-        	$scope.stockTradingProfit.user.id=4;
+        	$scope.stockTradingProfit.user=Principal.identity();
             StockTradingProfit.update($scope.stockTradingProfit,
                 function () {
                     $scope.loadAll();
