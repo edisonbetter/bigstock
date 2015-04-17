@@ -83,8 +83,8 @@ public class StockTradingProfit implements Serializable {
     @Column(name = "market", nullable = false)
     private String market;
 
-    @ManyToOne
-    private User user;
+    @Column(name = "user_name", nullable = true)
+    private String username;
 
     public Long getId() {
         return id;
@@ -198,12 +198,12 @@ public class StockTradingProfit implements Serializable {
         this.market = market;
     }
 
-    public User getUser() {
-        return user;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUser(String username) {
+        this.username = username;
     }
 
     @Override
@@ -244,6 +244,7 @@ public class StockTradingProfit implements Serializable {
                 ", profit='" + profit + "'" +
                 ", currency='" + currency + "'" +
                 ", market='" + market + "'" +
+                ", username='" + username + "'" +
                 '}';
     }
 }
