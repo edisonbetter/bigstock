@@ -3,8 +3,6 @@
 angular.module('bigstockApp')
     .controller('StockTradingProfitController', function ($scope, StockTradingProfit, Principal, ParseLinks) {
         $scope.stockTradingProfits = [];
-        // $scope.users = User.query();
-        $scope.currencyOptions = ["HKD", "CNY"];
         $scope.page = 1;
         $scope.loadAll = function() {
             StockTradingProfit.query({page: $scope.page, per_page: 20}, function(result, headers) {
@@ -19,7 +17,10 @@ angular.module('bigstockApp')
         $scope.loadAll();
 
         $scope.create = function () {
-        	$scope.stockTradingProfit.user=Principal.identity();
+        	Principal.identity().then(function(account) {
+        		$scope.stockTradingProfit.username=account.login;
+        	});
+        	
             StockTradingProfit.update($scope.stockTradingProfit,
                 function () {
                     $scope.loadAll();

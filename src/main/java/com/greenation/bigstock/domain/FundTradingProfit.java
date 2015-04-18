@@ -1,43 +1,33 @@
 package com.greenation.bigstock.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.greenation.bigstock.domain.util.CustomLocalDateSerializer;
-import com.greenation.bigstock.domain.util.ISO8601LocalDateDeserializer;
+import java.io.Serializable;
+import java.util.Objects;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
-import org.hibernate.annotations.Type;
-import org.joda.time.LocalDate;
-
-import javax.persistence.*;
-import javax.validation.constraints.*;
-
-import java.io.Serializable;
-import java.math.BigDecimal;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.Objects;
 
 /**
- * A StockTradingProfit.
+ * A FundTradingProfit.
  */
 @Entity
-@Table(name = "T_STOCK_TRADING_PROFIT")
+@Table(name = "T_FUND_TRADING_PROFIT")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
-public class StockTradingProfit extends TradingProfit implements Serializable {
-
+public class FundTradingProfit extends TradingProfit implements Serializable{
 	@NotNull
-    @Column(name = "market", nullable = false)
-    private String market;
+    @Column(name = "country", nullable = false)
+    private String country;
 	
-	public String getMarket() {
-        return market;
+	public String getCountry() {
+        return country;
     }
 
-    public void setMarket(String market) {
-        this.market = market;
+    public void setCountry(String country) {
+        this.country = country;
     }
 
     @Override
@@ -77,7 +67,7 @@ public class StockTradingProfit extends TradingProfit implements Serializable {
                 ", sellConsideration='" + getSellConsideration() + "'" +
                 ", profit='" + getProfit() + "'" +
                 ", currency='" + getCurrency() + "'" +
-                ", market='" + getMarket() + "'" +
+                ", market='" + getCountry() + "'" +
                 ", username='" + getUsername() + "'" +
                 '}';
     }

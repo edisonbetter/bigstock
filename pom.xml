@@ -543,12 +543,13 @@
                 <configuration>
                     <changeLogFile>src/main/resources/config/liquibase/master.xml</changeLogFile>
                     <diffChangeLogFile>src/main/resources/config/liquibase/changelog/${maven.build.timestamp}_changelog.xml</diffChangeLogFile>
-                    <driver></driver>
-                    <url></url>
+                    <driver>org.h2.Driver</driver>
+                    <url>jdbc:h2:mem:jhipster;DB_CLOSE_DELAY=-1</url>
                     <defaultSchemaName></defaultSchemaName>
                     <username></username>
-                    <password></password>
-                    <referenceUrl>hibernate:spring:com.greenation.bigstock.domain?dialect=</referenceUrl>
+                    <!-- <password></password> -->
+                    <emptyPassword>true</emptyPassword>
+                    <referenceUrl>hibernate:spring:com.greenation.bigstock.domain?dialect=org.hibernate.dialect.H2Dialect</referenceUrl>
                     <verbose>true</verbose>
                     <logging>debug</logging>
                 </configuration>

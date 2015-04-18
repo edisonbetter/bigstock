@@ -10,12 +10,14 @@
                 "additionalEntity": "JHipster will add addtional entities"
             },
             "stocks": {
-            	"main": "Stock",	
+            	"main": "Stock",
+            	"all": "All Stock",	
             	"hk": "Hong Kong Stock",
             	"cn": "China Stock"
             },
             "funds": {
             	"main": "Fund",	
+            	"all": "All Fund",
             	"hk": "Hong Kong Fund",
             	"cn": "China Fund"
             },
@@ -24,7 +26,7 @@
                 "settings": "Settings",
                 "password": "Password",
                 "sessions": "Sessions",
-                "login": "Authenticate",
+                "login": "Login",
                 "logout": "Log out",
                 "register": "Register"
             },

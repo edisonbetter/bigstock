@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+	<property name="now" value="now()" dbms="mysql,h2" />
+	<property name="now" value="current_timestamp" dbms="postgresql" />
+
+	<changeSet author="edisonyang (generated)" id="1429327779433-2">
+		<createTable tableName="T_FUND_TRADING_PROFIT">
+			<column autoIncrement="true" name="id" type="BIGINT">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="buy_consideration" type="DECIMAL(10, 2)">
+				<constraints nullable="false" />
+			</column>
+			<column name="buy_price" type="DECIMAL(10, 2)">
+				<constraints nullable="false" />
+			</column>
+			<column name="buy_transaction_fee" type="DECIMAL(10, 2)">
+				<constraints nullable="false" />
+			</column>
+			<column name="code" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="creation_date" type="date">
+				<constraints nullable="false" />
+			</column>
+			<column name="currency" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="name" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="profit" type="DECIMAL(10, 2)">
+				<constraints nullable="false" />
+			</column>
+			<column name="quantity" type="DECIMAL(10, 2)">
+				<constraints nullable="false" />
+			</column>
+			<column name="sell_consideration" type="DECIMAL(10, 2)">
+				<constraints nullable="false" />
+			</column>
+			<column name="sell_price" type="DECIMAL(10, 2)">
+				<constraints nullable="false" />
+			</column>
+			<column name="sell_transaction_fee" type="DECIMAL(10, 2)">
+				<constraints nullable="false" />
+			</column>
+			<column name="user_name" type="VARCHAR(255)" />
+			<column name="country" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<addForeignKeyConstraint baseColumnNames="user_name"
+			baseTableName="T_FUND_TRADING_PROFIT" constraintName="fk_fund_trading_profit_user_name"
+			referencedColumnNames="login" referencedTableName="T_USER" />
+
+		<loadData encoding="UTF-8"
+			file="config/liquibase/fund_trading_profits.csv" separator=","
+			tableName="T_FUND_TRADING_PROFIT">
+			<column name="creation_date" type="date" />
+		</loadData>
+	</changeSet>
+</databaseChangeLog>

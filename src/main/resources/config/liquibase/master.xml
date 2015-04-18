@@ -6,5 +6,6 @@
 
     <include file="classpath:config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20150411053444_added_entity_StockTradingProfit.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150418032935_added_entity_FundTradingProfit.xml" relativeToChangelogFile="false"/>
     <!-- JHipster will add liquibase changelogs here -->
 </databaseChangeLog>
