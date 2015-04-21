@@ -8,12 +8,52 @@ angular.module('bigstockApp')
                 url: '/stockTradingProfit',
                 data: {
                     roles: ['ROLE_USER'],
-                    pageTitle: 'bigstockApp.stockTradingProfit.home.title'
+                    pageTitle: 'bigstockApp.stockTradingProfit.home.title.all'
                 },
                 views: {
                     'content@': {
                         templateUrl: 'scripts/app/entities/stockTradingProfit/stockTradingProfits.html',
                         controller: 'StockTradingProfitController'
+                    }
+                },
+                resolve: {
+                    translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
+                        $translatePartialLoader.addPart('stockTradingProfit');
+                        return $translate.refresh();
+                    }]
+                }
+            })
+            .state('stockTradingProfitHKD', {
+                parent: 'entity',
+                url: '/stockTradingProfit/hkd',
+                data: {
+                    roles: ['ROLE_USER'],
+                    pageTitle: 'bigstockApp.stockTradingProfit.home.title.hkd'
+                },
+                views: {
+                    'content@': {
+                        templateUrl: 'scripts/app/entities/stockTradingProfit/stockTradingProfits.html',
+                        controller: 'StockTradingProfitHKDController'
+                    }
+                },
+                resolve: {
+                    translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
+                        $translatePartialLoader.addPart('stockTradingProfit');
+                        return $translate.refresh();
+                    }]
+                }
+            })
+            .state('stockTradingProfitCNY', {
+                parent: 'entity',
+                url: '/stockTradingProfit/cny',
+                data: {
+                    roles: ['ROLE_USER'],
+                    pageTitle: 'bigstockApp.stockTradingProfit.home.title.cny'
+                },
+                views: {
+                    'content@': {
+                        templateUrl: 'scripts/app/entities/stockTradingProfit/stockTradingProfits.html',
+                        controller: 'StockTradingProfitCNYController'
                     }
                 },
                 resolve: {

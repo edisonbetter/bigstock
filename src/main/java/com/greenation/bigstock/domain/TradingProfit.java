@@ -9,7 +9,9 @@ import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.MappedSuperclass;
+import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import org.hibernate.annotations.Type;
 import org.joda.time.LocalDate;
@@ -35,6 +37,7 @@ public class TradingProfit {
 
     @NotNull
     @Column(name = "code", nullable = false)
+    @Size(min=5, max=6)
     private String code;
 
     @NotNull
@@ -72,7 +75,7 @@ public class TradingProfit {
     private BigDecimal profit;
 
     @NotNull
-    @Column(name = "currency", nullable = false)
+    @Column(name = "currency", nullable = false, length=3)
     private String currency;
 
     

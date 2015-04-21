@@ -1,40 +1,45 @@
 {
-    "bigstockApp": {
-        "stockTradingProfit" : {
-            "home": {
-                "title": "Stock Profits",
-                "createLabel": "New",
-                "createOrEditLabel": "New or edit"
-            },
-            "delete": {
-                "question": "Are you sure you want to delete record {{ id }}?"
-            },
-            "detail": {
-                "title": "Stock Profit"
-            },
-            "creationDate": "Date",
-            "code": "Code",
-            "name": "Name",
-            "quantity": "Quantity",
-            "buyPrice": "Buy Price",
-            "sellPrice": "Sell Price",
-            "buyTransactionFee": "Buy Fee",
-            "sellTransactionFee": "Sell Fee",
-            "buyConsideration": "Buy Consideration",
-            "sellConsideration": "Sell Consideration",
-            "profit": "Profit",
-            "currency": "Currency",
-            "currencyOption":{
-            	"HKD": "HKD",
-            	"CNY": "CNY"
-            },
-            "market": "Market",
-            "marketOption": {
-            	"HK": "Hong Kong",
-            	"SZ": "Shen Zhen",
-            	"SH": "Shang Hai"
-            },
-            "user": "user"
-        }
-    }
+	"bigstockApp":{
+		"stockTradingProfit":{
+			"home":{
+				"title":{
+					"all":"All Stock Profits",
+					"hkd":"HKD Stock Profits",
+					"cny":"CNY Stock Profits"
+				},
+				"createLabel":"New",
+				"createOrEditLabel":"New or edit"
+			},
+			"delete":{
+				"question":"Are you sure you want to delete record {{ id }}?"
+			},
+			"detail":{
+				"title":"Stock Profit"
+			},
+			"creationDate":"Date",
+			"code":"Code",
+			"name":"Name",
+			"quantity":"Quantity",
+			"buyPrice":"Buy Price",
+			"sellPrice":"Sell Price",
+			"buyTransactionFee":"Buy Fee",
+			"sellTransactionFee":"Sell Fee",
+			"buyConsideration":"Buy Consideration",
+			"sellConsideration":"Sell Consideration",
+			"profit":"Profit",
+			"currency":"Currency",
+			"currencyOption":{
+				"HKD":"HKD",
+				"CNY":"CNY"
+			},
+			"market":"Market",
+			"marketOption":{
+				"HK":"Hong Kong",
+				"SZ":"Shen Zhen",
+				"SH":"Shang Hai"
+			},
+			"user":"user"
+		}
+		
+	}
 }

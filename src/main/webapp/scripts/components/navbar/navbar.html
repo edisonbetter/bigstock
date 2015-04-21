@@ -30,9 +30,9 @@
                     <ul class="dropdown-menu">
                     	<li ui-sref-active="active" ><a ui-sref="stockTradingProfit"><span class="glyphicon glyphicon-asterisk"></span>
                         &#xA0;<span translate="global.menu.stocks.all">All Stock</span></a></li>
-                        <li ui-sref-active="active" ><a ui-sref="stockTradingProfit"><span class="glyphicon glyphicon-asterisk"></span>
+                        <li ui-sref-active="active" ><a ui-sref="stockTradingProfitHKD"><span class="glyphicon glyphicon-asterisk"></span>
                         &#xA0;<span translate="global.menu.stocks.hk">Hong Kong Stock</span></a></li>
-                        <li ui-sref-active="active" ><a ui-sref="stockTradingProfit"><span class="glyphicon glyphicon-asterisk"></span>
+                        <li ui-sref-active="active" ><a ui-sref="stockTradingProfitCNY"><span class="glyphicon glyphicon-asterisk"></span>
                         &#xA0;<span translate="global.menu.stocks.cn">China Stock</span></a></li>
                         <!-- JHipster will add entities to the menu here -->
                     </ul>
@@ -73,6 +73,7 @@
             	<li ui-sref-active="active" ng-switch-when="false">
             		<a ui-sref="register">
                                 <span>
+                                	<span class="glyphicon glyphicon-plus"></span>
                                     <span class="hidden-tablet" translate="global.menu.account.register">
                                         Register
                                     </span>

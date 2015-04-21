@@ -78,6 +78,22 @@ public class StockTradingProfitResource {
         HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/stockTradingProfits", offset, limit);
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }
+    
+    /**
+     * GET  /stockTradingProfits/hk -> get all the stockTradingProfits with currency=HKD.
+     */
+    @RequestMapping(value = {"/stockTradingProfits/hkd", "/stockTradingProfits/cny"},
+            method = RequestMethod.GET,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    @Timed
+    public ResponseEntity<List<StockTradingProfit>> getAllByCurrency(@RequestParam(value="currency", required=false) String currency, @RequestParam(value = "page" , required = false) Integer offset,
+                                  @RequestParam(value = "per_page", required = false) Integer limit)
+        throws URISyntaxException {
+        Page<StockTradingProfit> page = stockTradingProfitRepository.findByCurrency(currency, PaginationUtil.generatePageRequest(offset, limit));
+        StringBuffer baseUrl = new StringBuffer("/api/stockTradingProfits/").append(currency.toLowerCase());
+        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, baseUrl.toString(), offset, limit);
+        return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
+    }
 
     /**
      * GET  /stockTradingProfits/:id -> get the "id" stockTradingProfit.
