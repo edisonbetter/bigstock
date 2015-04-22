@@ -19,75 +19,75 @@
 			<tbody>
 				<tr>
 					<td><span
-						translate="bigstockApp.stockTradingProfit.creationDate">CreationDate</span>
+						translate="bigstockApp.fundTradingProfit.creationDate">CreationDate</span>
 					</td>
 					<td><input type="text" class="input-sm form-control"
 						value="{{fundTradingProfit.creationDate}}" readonly></td>
-					<td><span translate="bigstockApp.stockTradingProfit.code">Code</span>
+					<td><span translate="bigstockApp.fundTradingProfit.code">Code</span>
 					</td>
 					<td><input type="text" class="input-sm form-control"
 						value="{{fundTradingProfit.code}}" readonly></td>
 				</tr>
 				<tr>
-					<td><span translate="bigstockApp.stockTradingProfit.name">Name</span>
+					<td><span translate="bigstockApp.fundTradingProfit.name">Name</span>
 					</td>
 					<td><input type="text" class="input-sm form-control"
 						value="{{fundTradingProfit.name}}" readonly></td>
-					<td><span translate="bigstockApp.stockTradingProfit.market">Market</span>
+					<td><span translate="bigstockApp.fundTradingProfit.market">Market</span>
 					</td>
 					<td><input type="text" class="input-sm form-control"
 						value="{{fundTradingProfit.country}}" readonly></td>
 				</tr>
 				<tr>
-					<td><span translate="bigstockApp.stockTradingProfit.buyPrice">BuyPrice</span>
+					<td><span translate="bigstockApp.fundTradingProfit.buyPrice">BuyPrice</span>
 					</td>
 					<td><input type="text" class="input-sm form-control"
 						value="{{fundTradingProfit.buyPrice}}" readonly></td>
 					<td><span
-						translate="bigstockApp.stockTradingProfit.buyTransactionFee">BuyTransactionFee</span>
+						translate="bigstockApp.fundTradingProfit.buyTransactionFee">BuyTransactionFee</span>
 					</td>
 					<td><input type="text" class="input-sm form-control"
 						value="{{fundTradingProfit.buyTransactionFee}}" readonly>
 					</td>
 				</tr>
 				<tr>
-					<td><span translate="bigstockApp.stockTradingProfit.sellPrice">SellPrice</span>
+					<td><span translate="bigstockApp.fundTradingProfit.sellPrice">SellPrice</span>
 					</td>
 					<td><input type="text" class="input-sm form-control"
 						value="{{fundTradingProfit.sellPrice}}" readonly></td>
 					<td><span
-						translate="bigstockApp.stockTradingProfit.sellTransactionFee">SellTransactionFee</span>
+						translate="bigstockApp.fundTradingProfit.sellTransactionFee">SellTransactionFee</span>
 					</td>
 					<td><input type="text" class="input-sm form-control"
 						value="{{fundTradingProfit.sellTransactionFee}}" readonly>
 					</td>
 				</tr>
 				<tr>
-					<td><span translate="bigstockApp.stockTradingProfit.quantity">Quantity</span>
+					<td><span translate="bigstockApp.fundTradingProfit.quantity">Quantity</span>
 					</td>
 					<td><input type="text" class="input-sm form-control"
 						value="{{fundTradingProfit.quantity}}" readonly></td>
 					<td><span
-						translate="bigstockApp.stockTradingProfit.buyConsideration">BuyConsideration</span>
+						translate="bigstockApp.fundTradingProfit.buyConsideration">BuyConsideration</span>
 					</td>
 					<td><input type="text" class="input-sm form-control"
 						value="{{fundTradingProfit.buyConsideration}}" readonly>
 					</td>
 				</tr>
 				<tr>
-					<td><span translate="bigstockApp.stockTradingProfit.currency">Currency</span>
+					<td><span translate="bigstockApp.fundTradingProfit.currency">Currency</span>
 					</td>
 					<td><input type="text" class="input-sm form-control"
 						value="{{fundTradingProfit.currency}}" readonly></td>
 					<td><span
-						translate="bigstockApp.stockTradingProfit.sellConsideration">SellConsideration</span>
+						translate="bigstockApp.fundTradingProfit.sellConsideration">SellConsideration</span>
 					</td>
 					<td><input type="text" class="input-sm form-control"
 						value="{{fundTradingProfit.sellConsideration}}" readonly>
 					</td>
 				</tr>
 				<tr>
-					<td><span translate="bigstockApp.stockTradingProfit.profit">Profit</span>
+					<td><span translate="bigstockApp.fundTradingProfit.profit">Profit</span>
 					</td>
 					<td><input type="text" 
 						class=" text-success input-la form-control" value="{{stockTradingProfit.profit}}" readonly></td>
@@ -96,7 +96,7 @@
 		</table>
 	</div>
 
-	<button type="submit" ui-sref="fundTradingProfit" class="btn btn-info">
+	<button type="button" ng-click="goBack()" class="btn btn-info">
 		<span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span
 			translate="entity.action.back"> Back</span>
 	</button>
@@ -113,7 +113,7 @@
 							delete operation</h4>
 					</div>
 					<div class="modal-body">
-						<p translate="bigstockApp.stockTradingProfit.delete.question"
+						<p translate="bigstockApp.fundTradingProfit.delete.question"
 							translate-values="{id: '{{fundTradingProfit.id}}'}">Are you
 							sure you want to delete this StockTradingProfit?</p>
 					</div>

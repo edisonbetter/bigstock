@@ -1,7 +1,7 @@
 id,creation_date,code,name,quantity,buy_price,sell_price,buy_transaction_fee,sell_transaction_fee,buy_consideration,sell_consideration,profit,currency,country,user_name
 1,2015-01-02,00112,银河主题策略,3000,2,3,50,55,6000,9000,2895,HKD,Hong Kong,user
-2,2015-02-03,23113,嘉实逆向策略,3000,2,3,50,50,6000,9000,2900,HKD,Hong Kong,user
+2,2015-02-03,23113,嘉实逆向策略,3000,2,3,50,50,6000,9000,2900,CNY,China,user
 3,2015-03-04,44114,嘉实全球互联网,3000,2,3,100,100,6000,9000,2800,HKD,Hong Kong,user
-4,2015-04-02,61615,易方达新兴成长,3000,2,3,95,55,6000,9000,2850,HKD,China,user
-5,2015-04-02,61616,汇添富移动互联网,3000,2,3,95,55,6000,9000,2850,HKD,China,admin
+4,2015-04-02,61615,易方达新兴成长,3000,2,3,95,55,6000,9000,2850,CNY,China,user
+5,2015-04-02,61616,汇添富移动互联网,3000,2,3,95,55,6000,9000,2850,CNY,China,admin
 7,2015-04-08,61617,嘉实混合策略,3000,2,3,10,55,6000,9000,2800,HKD,Hong Kong,admin

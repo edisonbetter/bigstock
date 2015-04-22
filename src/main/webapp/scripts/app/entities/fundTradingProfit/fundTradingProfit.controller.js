@@ -3,9 +3,10 @@
 angular.module('bigstockApp')
     .controller('FundTradingProfitController', function ($scope, FundTradingProfit, Principal, ParseLinks) {
         $scope.fundTradingProfits = [];
+        $scope.tableTitle="bigstockApp.fundTradingProfit.home.title.all";
         $scope.page = 1;
         $scope.loadAll = function() {
-            FundTradingProfit.query({page: $scope.page, per_page: 20}, function(result, headers) {
+            FundTradingProfit.all.query({page: $scope.page, per_page: 20}, function(result, headers) {
                 $scope.links = ParseLinks.parse(headers('link'));
                 $scope.fundTradingProfits = result;
             });
@@ -20,7 +21,7 @@ angular.module('bigstockApp')
         	Principal.identity().then(function(account) {
         		$scope.fundTradingProfit.username=account.login;
         	});
-            FundTradingProfit.update($scope.fundTradingProfit,
+            FundTradingProfit.all.update($scope.fundTradingProfit,
                 function () {
                     $scope.loadAll();
                     $('#saveFundTradingProfitModal').modal('hide');
@@ -29,7 +30,7 @@ angular.module('bigstockApp')
         };
 
         $scope.update = function (id) {
-            FundTradingProfit.get({id: id}, function(result) {
+            FundTradingProfit.all.get({id: id}, function(result) {
                 $scope.fundTradingProfit = result;
                 $('#saveFundTradingProfitModal').modal('show');
             });

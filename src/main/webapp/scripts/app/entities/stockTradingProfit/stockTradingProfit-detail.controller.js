@@ -26,5 +26,5 @@ angular.module('bigstockApp')
         
         $scope.goBack = function(){
         	$window.history.back();
-        }
+        };
     });

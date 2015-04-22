@@ -86,6 +86,22 @@ public class FundTradingProfitResource {
     }
 
     /**
+     * GET  /fundTradingProfits/hkd,cny -> get all the fundTradingProfits with currency=HKD or CNY.
+     */
+    @RequestMapping(value = {"/fundTradingProfits/hkd", "/fundTradingProfits/cny"},
+            method = RequestMethod.GET,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    @Timed
+    public ResponseEntity<List<FundTradingProfit>> getAllByCurrency(@RequestParam(value="currency", required=false) String currency, @RequestParam(value = "page" , required = false) Integer offset,
+                                  @RequestParam(value = "per_page", required = false) Integer limit)
+        throws URISyntaxException {
+        Page<FundTradingProfit> page = fundTradingProfitRepository.findByCurrency(currency, PaginationUtil.generatePageRequest(offset, limit));
+        StringBuffer baseUrl = new StringBuffer("/api/fundTradingProfits/").append(currency.toLowerCase());
+        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, baseUrl.toString(), offset, limit);
+        return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
+    }
+    
+    /**
      * GET  /fundTradingProfits/:id -> get the "id" fundTradingProfit.
      */
     @RequestMapping(value = "/fundTradingProfits/{id}",

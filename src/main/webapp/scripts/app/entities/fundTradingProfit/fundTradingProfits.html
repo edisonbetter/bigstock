@@ -1,8 +1,9 @@
 <div>
 
-    <h2>{{"bigstockApp.stockTradingProfit.home.title" | translate}}
+    <h2>
+    	<span translate={{tableTitle}}> table title</span>
 	    <button class="btn btn-success btn-lg " data-toggle="modal" data-target="#saveFundTradingProfitModal" ng-click="clear()">
-	        <span class="glyphicon glyphicon-plus"></span> <span translate="bigstockApp.stockTradingProfit.home.createLabel">Create a new StockTradingProfit</span>
+	        <span class="glyphicon glyphicon-plus"></span> <span translate="bigstockApp.fundTradingProfit.home.createLabel">Create a new StockTradingProfit</span>
 	   	</button>
     </h2>
     <div class="modal fade" id="saveFundTradingProfitModal" tabindex="-1" role="dialog" aria-labelledby="myFundTradingProfitLabel"
@@ -14,52 +15,52 @@
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                                 ng-click="clear()">&times;</button>
-                        <h4 class="modal-title" id="myFundTradingProfitLabel" translate="bigstockApp.stockTradingProfit.home.createOrEditLabel">Create or edit a StockTradingProfit</h4>
+                        <h4 class="modal-title" id="myFundTradingProfitLabel" translate="bigstockApp.fundTradingProfit.home.createOrEditLabel">Create or edit a StockTradingProfit</h4>
                     </div>
                     <div class="modal-body form-horizontal">
                         <div class="form-group">
-                            <label class="col-sm-2 control-label" translate="bigstockApp.stockTradingProfit.creationDate">CreationDate</label>
+                            <label class="col-sm-2 control-label" translate="bigstockApp.fundTradingProfit.creationDate">CreationDate</label>
                             <div class="col-sm-10">
                             	<input type="date" class="form-control" name="creationDate"
                                    ng-model="fundTradingProfit.creationDate" required>
 							</div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-2 control-label" translate="bigstockApp.stockTradingProfit.code">Code</label>
+                            <label class="col-sm-2 control-label" translate="bigstockApp.fundTradingProfit.code">Code</label>
                             <div class="col-sm-10">
                             	<input type="text" class="form-control" name="code"
                                    ng-model="fundTradingProfit.code" required>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-2 control-label" translate="bigstockApp.stockTradingProfit.name">Name</label>
+                            <label class="col-sm-2 control-label" translate="bigstockApp.fundTradingProfit.name">Name</label>
                             <div class="col-sm-10">
                             	<input type="text" class="form-control" name="name"
                                    ng-model="fundTradingProfit.name" required>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-2 control-label" translate="bigstockApp.stockTradingProfit.market">Market</label>
+                            <label class="col-sm-2 control-label" translate="bigstockApp.fundTradingProfit.market">Market</label>
                            	<div class="col-sm-10">
 	                           	<select name="market" class="form-control" ng-model="fundTradingProfit.country" required>
-	                           		<option value="Hong Kong" selected>{{"bigstockApp.stockTradingProfit.marketOption.HK" | translate }}</option>
-	                           		<option value="Shen Zhen">{{"bigstockApp.stockTradingProfit.marketOption.SZ" | translate }}</option>
-	                           		<option value="Shang Hai">{{"bigstockApp.stockTradingProfit.marketOption.SH" | translate }}</option>
+	                           		<option value="Hong Kong" selected>{{"bigstockApp.fundTradingProfit.marketOption.HK" | translate }}</option>
+	                           		<option value="Shen Zhen">{{"bigstockApp.fundTradingProfit.marketOption.SZ" | translate }}</option>
+	                           		<option value="Shang Hai">{{"bigstockApp.fundTradingProfit.marketOption.SH" | translate }}</option>
 	                           	</select>
 	                        </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-2 control-label" translate="bigstockApp.stockTradingProfit.currency">Currency</label>
+                            <label class="col-sm-2 control-label" translate="bigstockApp.fundTradingProfit.currency">Currency</label>
                             <div class="col-sm-10">
 	                            <select name="currency" class="form-control" ng-model="fundTradingProfit.currency" required>
-	                           		<option value="HKD" selected>{{"bigstockApp.stockTradingProfit.currencyOption.HKD" | translate }}</option>
-	                           		<option value="CNY">{{"bigstockApp.stockTradingProfit.currencyOption.CNY" | translate }}</option>
+	                           		<option value="HKD" selected>{{"bigstockApp.fundTradingProfit.currencyOption.HKD" | translate }}</option>
+	                           		<option value="CNY">{{"bigstockApp.fundTradingProfit.currencyOption.CNY" | translate }}</option>
 	                           	</select>
                             </div>
                                    
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-2 control-label" translate="bigstockApp.stockTradingProfit.quantity">Quantity</label>
+                            <label class="col-sm-2 control-label" translate="bigstockApp.fundTradingProfit.quantity">Quantity</label>
                             <div class="col-sm-10">
 	                            <input type="number" class="form-control" name="quantity"
 	                                   ng-model="fundTradingProfit.quantity" required>
@@ -72,7 +73,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-2 control-label" translate="bigstockApp.stockTradingProfit.buyPrice">BuyPrice</label>
+                            <label class="col-sm-2 control-label" translate="bigstockApp.fundTradingProfit.buyPrice">BuyPrice</label>
                             <div class="col-sm-10">
                             <input type="number" class="form-control" name="buyPrice"
                                    ng-model="fundTradingProfit.buyPrice" required>
@@ -85,7 +86,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-2 control-label" translate="bigstockApp.stockTradingProfit.sellPrice">SellPrice</label>
+                            <label class="col-sm-2 control-label" translate="bigstockApp.fundTradingProfit.sellPrice">SellPrice</label>
                             <div class="col-sm-10">
 	                            <input type="number" class="form-control" name="sellPrice"
 	                                   ng-model="fundTradingProfit.sellPrice" required>
@@ -98,7 +99,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-2 control-label" translate="bigstockApp.stockTradingProfit.buyTransactionFee">BuyTransactionFee</label>
+                            <label class="col-sm-2 control-label" translate="bigstockApp.fundTradingProfit.buyTransactionFee">BuyTransactionFee</label>
                             <div class="col-sm-10">
 	                            <input type="number" class="form-control" name="buyTransactionFee"
 	                                   ng-model="fundTradingProfit.buyTransactionFee" required>
@@ -111,7 +112,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-2 control-label" translate="bigstockApp.stockTradingProfit.sellTransactionFee">SellTransactionFee</label>
+                            <label class="col-sm-2 control-label" translate="bigstockApp.fundTradingProfit.sellTransactionFee">SellTransactionFee</label>
                             <div class="col-sm-10">
 	                            <input type="number" class="form-control" name="sellTransactionFee"
 	                                   ng-model="fundTradingProfit.sellTransactionFee" required>
@@ -141,16 +142,16 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th translate="bigstockApp.stockTradingProfit.creationDate">CreationDate</th>
-                    <th translate="bigstockApp.stockTradingProfit.code">Code</th>
-                    <th translate="bigstockApp.stockTradingProfit.name">Name</th>
-                    <th translate="bigstockApp.stockTradingProfit.currency">Currency</th>
-                    <th translate="bigstockApp.stockTradingProfit.quantity">Quantity</th>
-                    <th translate="bigstockApp.stockTradingProfit.buyPrice">BuyPrice</th>
-                    <th translate="bigstockApp.stockTradingProfit.sellPrice">SellPrice</th>
-                    <th translate="bigstockApp.stockTradingProfit.buyTransactionFee">BuyTransactionFee</th>
-                    <th translate="bigstockApp.stockTradingProfit.sellTransactionFee">SellTransactionFee</th>
-                    <th translate="bigstockApp.stockTradingProfit.profit">Profit</th>
+                    <th translate="bigstockApp.fundTradingProfit.creationDate">CreationDate</th>
+                    <th translate="bigstockApp.fundTradingProfit.code">Code</th>
+                    <th translate="bigstockApp.fundTradingProfit.name">Name</th>
+                    <th translate="bigstockApp.fundTradingProfit.currency">Currency</th>
+                    <th translate="bigstockApp.fundTradingProfit.quantity">Quantity</th>
+                    <th translate="bigstockApp.fundTradingProfit.buyPrice">BuyPrice</th>
+                    <th translate="bigstockApp.fundTradingProfit.sellPrice">SellPrice</th>
+                    <th translate="bigstockApp.fundTradingProfit.buyTransactionFee">BuyTransactionFee</th>
+                    <th translate="bigstockApp.fundTradingProfit.sellTransactionFee">SellTransactionFee</th>
+                    <th translate="bigstockApp.fundTradingProfit.profit">Profit</th>
                     <th></th>
                 </tr>
             </thead>

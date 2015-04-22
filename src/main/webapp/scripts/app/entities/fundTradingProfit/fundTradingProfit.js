@@ -8,7 +8,7 @@ angular.module('bigstockApp')
                 url: '/fundTradingProfit',
                 data: {
                     roles: ['ROLE_USER'],
-                    pageTitle: 'bigstockApp.stockTradingProfit.home.title'
+                    pageTitle: 'bigstockApp.fundTradingProfit.home.title'
                 },
                 views: {
                     'content@': {
@@ -23,12 +23,52 @@ angular.module('bigstockApp')
                     }]
                 }
             })
+            .state('fundTradingProfitHKD', {
+                parent: 'entity',
+                url: '/fundTradingProfit/hkd',
+                data: {
+                    roles: ['ROLE_USER'],
+                    pageTitle: 'bigstockApp.fundTradingProfit.home.title.hkd'
+                },
+                views: {
+                    'content@': {
+                        templateUrl: 'scripts/app/entities/fundTradingProfit/fundTradingProfits.html',
+                        controller: 'FundTradingProfitHKDController'
+                    }
+                },
+                resolve: {
+                    translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
+                        $translatePartialLoader.addPart('fundTradingProfit');
+                        return $translate.refresh();
+                    }]
+                }
+            })
+            .state('fundTradingProfitCNY', {
+                parent: 'entity',
+                url: '/fundTradingProfit/cny',
+                data: {
+                    roles: ['ROLE_USER'],
+                    pageTitle: 'bigstockApp.fundTradingProfit.home.title.cny'
+                },
+                views: {
+                    'content@': {
+                        templateUrl: 'scripts/app/entities/fundTradingProfit/fundTradingProfits.html',
+                        controller: 'FundTradingProfitCNYController'
+                    }
+                },
+                resolve: {
+                    translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
+                        $translatePartialLoader.addPart('fundTradingProfit');
+                        return $translate.refresh();
+                    }]
+                }
+            })
             .state('fundTradingProfitDetail', {
                 parent: 'entity',
                 url: '/fundTradingProfit/:id',
                 data: {
                     roles: ['ROLE_USER'],
-                    pageTitle: 'bigstockApp.stockTradingProfit.detail.title'
+                    pageTitle: 'bigstockApp.fundTradingProfit.detail.title'
                 },
                 views: {
                     'content@': {
