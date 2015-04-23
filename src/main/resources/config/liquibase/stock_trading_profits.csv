@@ -1,7 +1,7 @@
 id,creation_date,code,name,quantity,buy_price,sell_price,buy_transaction_fee,sell_transaction_fee,buy_consideration,sell_consideration,profit,currency,market,user_name
-1,2015-01-02,00111,广发证券,3000,2,3,50,55,6000,9000,2895,HKD,Hong Kong,user
-2,2015-02-03,23111,汇丰控股,3000,2,3,50,50,6000,9000,2900,CNY,Shen Zhen,user
-3,2015-03-04,44111,福耀玻璃,3000,2,3,100,100,6000,9000,2800,CNY,Shang Hai,user
-4,2015-04-02,61611,山东黄金,3000,2,3,95,55,6000,9000,2850,HKD,Hong Kong,user
-5,2015-04-02,61612,海螺水泥,3000,2,3,95,55,6000,9000,2850,HKD,Hong Kong,admin
-7,2015-04-08,61613,中国人寿,3000,2,3,10,55,6000,9000,2800,HKD,Hong Kong,admin
+100,2015-01-02,00111,广发证券,3000,2,3,50,55,6000,9000,2895,HKD,Hong Kong,user
+101,2015-02-03,23111,汇丰控股,3000,2,3,50,50,6000,9000,2900,CNY,Shen Zhen,user
+102,2015-03-04,44111,福耀玻璃,3000,2,3,100,100,6000,9000,2800,CNY,Shang Hai,user
+103,2015-04-02,61611,山东黄金,3000,2,3,95,55,6000,9000,2850,HKD,Hong Kong,user
+104,2015-04-02,61612,海螺水泥,3000,2,3,95,55,6000,9000,2850,HKD,Hong Kong,admin
+105,2015-04-08,61613,中国人寿,3000,2,3,10,55,6000,9000,2800,HKD,Hong Kong,admin

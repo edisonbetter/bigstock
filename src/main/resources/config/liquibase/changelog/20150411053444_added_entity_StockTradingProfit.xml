@@ -67,5 +67,12 @@
                   tableName="T_STOCK_TRADING_PROFIT">
         	<column name="creation_date" type="date"/>
         </loadData>
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/edison_stock_trading_profits.csv"
+                  separator=","
+                  tableName="T_STOCK_TRADING_PROFIT">
+        	<column name="creation_date" type="date"/>
+        </loadData>
+        
     </changeSet>
 </databaseChangeLog>
