@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('bigstockApp')
-    .controller('FundTradingProfitDetailController', function ($scope, $stateParams, FundTradingProfit, User) {
+    .controller('FundTradingProfitDetailController', function ($scope, $stateParams, $window, FundTradingProfit, User) {
         $scope.fundTradingProfit = {};
         $scope.load = function (id) {
             FundTradingProfit.all.get({id: id}, function(result) {
