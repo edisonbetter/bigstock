@@ -15,7 +15,7 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
  * A FundTradingProfit.
  */
 @Entity
-@Table(name = "T_FUND_TRADING_PROFIT")
+@Table(name="FUND_TRADING_PROFIT")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class FundTradingProfit extends TradingProfit implements Serializable{
 	@NotNull

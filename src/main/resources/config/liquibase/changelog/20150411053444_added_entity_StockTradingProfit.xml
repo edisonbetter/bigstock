@@ -11,7 +11,7 @@
         Added the entity StockTradingProfit.
     -->
     <changeSet id="20150411053444" author="jhipster">
-        <createTable tableName="T_STOCK_TRADING_PROFIT">
+        <createTable tableName="STOCK_TRADING_PROFIT">
             <column name="id" type="bigint" autoIncrement="true">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
@@ -56,21 +56,21 @@
         </createTable>
         
         <addForeignKeyConstraint baseColumnNames="user_name"
-                                 baseTableName="T_STOCK_TRADING_PROFIT"
+                                 baseTableName="STOCK_TRADING_PROFIT"
                                  constraintName="fk_stock_trading_profit_user_name"
                                  referencedColumnNames="login"
-                                 referencedTableName="T_USER"/>
+                                 referencedTableName="USER"/>
 		
 		<loadData encoding="UTF-8"
                   file="config/liquibase/stock_trading_profits.csv"
                   separator=","
-                  tableName="T_STOCK_TRADING_PROFIT">
+                  tableName="STOCK_TRADING_PROFIT">
         	<column name="creation_date" type="date"/>
         </loadData>
         <loadData encoding="UTF-8"
                   file="config/liquibase/edison_stock_trading_profits.csv"
                   separator=","
-                  tableName="T_STOCK_TRADING_PROFIT">
+                  tableName="STOCK_TRADING_PROFIT">
         	<column name="creation_date" type="date"/>
         </loadData>
         

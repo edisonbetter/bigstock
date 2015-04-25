@@ -24,7 +24,7 @@ import java.util.Objects;
  * A StockTradingProfit.
  */
 @Entity
-@Table(name = "T_STOCK_TRADING_PROFIT")
+@Table(name="STOCK_TRADING_PROFIT")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class StockTradingProfit extends TradingProfit implements Serializable {
 

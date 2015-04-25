@@ -22,4 +22,5 @@ public interface StockTradingProfitRepository extends JpaRepository<StockTrading
     
     @Query("SELECT stockTradingProfit FROM StockTradingProfit stockTradingProfit WHERE stockTradingProfit.username = ?#{principal.username} and currency=:currency")
     Page<StockTradingProfit> findByCurrency(@Param("currency")String currency, Pageable pageable);
+    
 }

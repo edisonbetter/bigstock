@@ -23,11 +23,8 @@ import com.greenation.bigstock.domain.util.ISO8601LocalDateDeserializer;
 
 @MappedSuperclass
 @Inheritance(strategy=InheritanceType.TABLE_PER_CLASS)
-public class TradingProfit {
-	@Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-
+public abstract class TradingProfit extends BaseEntity{
+	
     @NotNull
     @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentLocalDate")
     @JsonSerialize(using = CustomLocalDateSerializer.class)
@@ -78,18 +75,8 @@ public class TradingProfit {
     @Column(name = "currency", nullable = false, length=3)
     private String currency;
 
-    
-
     @Column(name = "user_name", nullable = true)
     private String username;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public LocalDate getCreationDate() {
         return creationDate;

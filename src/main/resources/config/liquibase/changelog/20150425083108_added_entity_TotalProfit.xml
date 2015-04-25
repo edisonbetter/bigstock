@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+	<property name="now" value="now()" dbms="mysql,h2" />
+
+	<changeSet author="edisonyang (generated)" id="1429950672910-8">
+		<createTable tableName="Total_Profit">
+			<column autoIncrement="true" name="id" type="BIGINT">
+				<constraints primaryKey="true" primaryKeyName="TotalProfitPK" />
+			</column>
+			<column name="cny_profits" type="DECIMAL(19, 2)">
+				<constraints nullable="false" />
+			</column>
+			<column name="hkd_profits" type="DECIMAL(19, 2)">
+				<constraints nullable="false" />
+			</column>
+			<column name="user_name" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+
+		<addForeignKeyConstraint baseColumnNames="user_name"
+			baseTableName="TOTAL_PROFIT" constraintName="fk_total_profit_user_name"
+			referencedColumnNames="login" referencedTableName="USER" />
+
+		<loadData encoding="UTF-8"
+			file="config/liquibase/total_profits.csv" separator=","
+			tableName="TOTAL_PROFIT">
+		</loadData>
+	</changeSet>
+</databaseChangeLog>

@@ -5,7 +5,7 @@ angular.module('bigstockApp')
         $stateProvider
             .state('stockTradingProfit', {
                 parent: 'entity',
-                url: '/stockTradingProfit',
+                url: '/stockTradingProfits',
                 data: {
                     roles: ['ROLE_USER'],
                     pageTitle: 'bigstockApp.stockTradingProfit.home.title.all'
@@ -25,7 +25,7 @@ angular.module('bigstockApp')
             })
             .state('stockTradingProfitHKD', {
                 parent: 'entity',
-                url: '/stockTradingProfit/hkd',
+                url: '/stockTradingProfits/hkd',
                 data: {
                     roles: ['ROLE_USER'],
                     pageTitle: 'bigstockApp.stockTradingProfit.home.title.hkd'
@@ -45,7 +45,7 @@ angular.module('bigstockApp')
             })
             .state('stockTradingProfitCNY', {
                 parent: 'entity',
-                url: '/stockTradingProfit/cny',
+                url: '/stockTradingProfits/cny',
                 data: {
                     roles: ['ROLE_USER'],
                     pageTitle: 'bigstockApp.stockTradingProfit.home.title.cny'
@@ -65,7 +65,7 @@ angular.module('bigstockApp')
             })
             .state('stockTradingProfitDetail', {
                 parent: 'entity',
-                url: '/stockTradingProfit/:id',
+                url: '/stockTradingProfits/:id',
                 data: {
                     roles: ['ROLE_USER'],
                     pageTitle: 'bigstockApp.stockTradingProfit.detail.title'

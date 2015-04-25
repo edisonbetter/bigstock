@@ -5,7 +5,7 @@ angular.module('bigstockApp')
         $stateProvider
             .state('fundTradingProfit', {
                 parent: 'entity',
-                url: '/fundTradingProfit',
+                url: '/fundTradingProfits',
                 data: {
                     roles: ['ROLE_USER'],
                     pageTitle: 'bigstockApp.fundTradingProfit.home.title'
@@ -25,7 +25,7 @@ angular.module('bigstockApp')
             })
             .state('fundTradingProfitHKD', {
                 parent: 'entity',
-                url: '/fundTradingProfit/hkd',
+                url: '/fundTradingProfits/hkd',
                 data: {
                     roles: ['ROLE_USER'],
                     pageTitle: 'bigstockApp.fundTradingProfit.home.title.hkd'
@@ -45,7 +45,7 @@ angular.module('bigstockApp')
             })
             .state('fundTradingProfitCNY', {
                 parent: 'entity',
-                url: '/fundTradingProfit/cny',
+                url: '/fundTradingProfits/cny',
                 data: {
                     roles: ['ROLE_USER'],
                     pageTitle: 'bigstockApp.fundTradingProfit.home.title.cny'
@@ -65,7 +65,7 @@ angular.module('bigstockApp')
             })
             .state('fundTradingProfitDetail', {
                 parent: 'entity',
-                url: '/fundTradingProfit/:id',
+                url: '/fundTradingProfits/:id',
                 data: {
                     roles: ['ROLE_USER'],
                     pageTitle: 'bigstockApp.fundTradingProfit.detail.title'
