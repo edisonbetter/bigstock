@@ -30,15 +30,6 @@ angular.module('bigstockApp')
                 });
         };
 
-        $scope.update = function (id) {
-            StockTradingProfit.all.get({id: id}, function(result) {
-                $scope.stockTradingProfit = result;
-                $('#saveStockTradingProfitModal').modal('show');
-            });
-        };
-
-        
-
         $scope.clear = function () {
             $scope.stockTradingProfit = {creationDate: null, code: null, name: null, quantity: null, buyPrice: null, sellPrice: null, buyTransactionFee: null, sellTransactionFee: null, buyConsideration: null, sellConsideration: null, profit: null, currency: null, market: null, id: null};
             $scope.editForm.$setPristine();

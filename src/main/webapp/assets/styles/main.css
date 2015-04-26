@@ -8663,9 +8663,15 @@ ul#strength {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/edisonyang\/Dev\/IDE\/STS\/sts-bundle\/stsws\/BigStock\/bigstock\/src\/main\/scss\/main\.scss}line{font-family:\00003122}}
-.form-profit {
+.form-profit-win {
   font-weight: bold;
   color: green;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/edisonyang\/Dev\/IDE\/STS\/sts-bundle\/stsws\/BigStock\/bigstock\/src\/main\/scss\/main\.scss}line{font-family:\00003122}}
+.form-profit-lose {
+  font-weight: bold;
+  color: red;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/edisonyang\/Dev\/IDE\/STS\/sts-bundle\/stsws\/BigStock\/bigstock\/src\/main\/scss\/main\.scss}line{font-family:\00003127}}

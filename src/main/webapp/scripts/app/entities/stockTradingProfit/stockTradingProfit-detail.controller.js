@@ -21,7 +21,15 @@ angular.module('bigstockApp')
             StockTradingProfit.all.delete({id: id},
                 function () {
                     $('#deleteStockTradingProfitConfirmation').modal('hide');
+                    $scope.goBack();
                 });
+        };
+        
+        $scope.update = function (id) {
+            StockTradingProfit.all.get({id: id}, function(result) {
+                $scope.stockTradingProfit = result;
+                $('#saveStockTradingProfitModal').modal('show');
+            });
         };
         
         $scope.goBack = function(){
