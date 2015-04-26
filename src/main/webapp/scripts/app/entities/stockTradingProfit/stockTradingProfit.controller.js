@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('bigstockApp')
-    .controller('StockTradingProfitController', function ($scope, StockTradingProfit, Principal, ParseLinks) {
+    .controller('StockTradingProfitController', function ($scope, $filter,StockTradingProfit, Principal, ParseLinks) {
         $scope.stockTradingProfits = [];
         $scope.tableTitle="bigstockApp.stockTradingProfit.home.title.all";
         $scope.page = 1;

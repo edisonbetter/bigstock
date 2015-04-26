@@ -78,7 +78,7 @@ public class StockTradingProfitResource {
     
     
     private void updateTotalProfit(StockTradingProfit stockTradingProfit){
-    	profitService.updateTotalProfits(stockTradingProfit.getCurrency(), stockTradingProfit.getProfit());
+    	profitService.updateTotalProfits("Stock", stockTradingProfit.getCurrency(), stockTradingProfit.getProfit());
     }
 
     /**

@@ -24,7 +24,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.codahale.metrics.annotation.Timed;
 import com.greenation.bigstock.domain.FundTradingProfit;
+import com.greenation.bigstock.domain.StockTradingProfit;
 import com.greenation.bigstock.repository.FundTradingProfitRepository;
+import com.greenation.bigstock.service.ProfitService;
 import com.greenation.bigstock.web.rest.util.PaginationUtil;
 
 /**
@@ -38,6 +40,9 @@ public class FundTradingProfitResource {
     @Inject
     private FundTradingProfitRepository fundTradingProfitRepository;
 
+    @Inject
+    private ProfitService profitService;
+    
     /**
      * POST  /fudnTradingProfits -> Create a new fundTradingProfit.
      */
@@ -51,6 +56,7 @@ public class FundTradingProfitResource {
             return ResponseEntity.badRequest().header("Failure", "A new fundTradingProfit cannot already have an ID").build();
         }
         fundTradingProfitRepository.save(fundTradingProfit);
+        updateTotalProfit(fundTradingProfit);
         return ResponseEntity.created(new URI("/api/fundTradingProfits/" + fundTradingProfit.getId())).build();
     }
 
@@ -67,7 +73,12 @@ public class FundTradingProfitResource {
             return create(fundTradingProfit);
         }
         fundTradingProfitRepository.save(fundTradingProfit);
+        updateTotalProfit(fundTradingProfit);
         return ResponseEntity.ok().build();
+    }
+    
+    private void updateTotalProfit(FundTradingProfit fundTradingProfit){
+    	profitService.updateTotalProfits("Fund", fundTradingProfit.getCurrency(), fundTradingProfit.getProfit());
     }
 
     /**

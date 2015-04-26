@@ -13,7 +13,19 @@
 			<column name="cny_profits" type="DECIMAL(19, 2)">
 				<constraints nullable="false" />
 			</column>
+			<column name="cny_fund_profits" type="DECIMAL(19, 2)">
+				<constraints nullable="false" />
+			</column>
+			<column name="cny_stock_profits" type="DECIMAL(19, 2)">
+				<constraints nullable="false" />
+			</column>
 			<column name="hkd_profits" type="DECIMAL(19, 2)">
+				<constraints nullable="false" />
+			</column>
+			<column name="hkd_fund_profits" type="DECIMAL(19, 2)">
+				<constraints nullable="false" />
+			</column>
+			<column name="hkd_stock_profits" type="DECIMAL(19, 2)">
 				<constraints nullable="false" />
 			</column>
 			<column name="user_name" type="VARCHAR(255)">

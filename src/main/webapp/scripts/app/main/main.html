@@ -9,8 +9,12 @@
 
             <div ng-switch="isAuthenticated()">
                 <div class="alert alert-success" ng-switch-when="true">
-                	<span>CNY Total Profits: {{tradingProfit.cnyProfits}}</span>
-					<span>HKD Total Profits: {{tradingProfit.hkdProfits}}</span>
+                	<div>CNY Total Profits: {{tradingProfit.cnyProfits}}</div>
+                	<div>CNY Fund Profits: {{tradingProfit.cnyFundProfits}}</div>
+                	<div>CNY Stock Profits: {{tradingProfit.cnyStockProfits}}</div>
+					<div>HKD Total Profits: {{tradingProfit.hkdProfits}}</div>
+					<div>HKD Fund Profits: {{tradingProfit.hkdFundProfits}}</div>
+					<div>HKD Stock Profits: {{tradingProfit.hkdStockProfits}}</div>
                 </div>
 
                 <div class="alert alert-warning" ng-switch-when="false" translate="global.messages.info.authenticated">

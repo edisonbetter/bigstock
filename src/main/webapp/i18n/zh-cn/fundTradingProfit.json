@@ -1,0 +1,45 @@
+{
+	"bigstockApp":{
+		"fundTradingProfit":{
+			"home":{
+				"title":{
+					"all":"All Fund Profits",
+					"hkd":"HKD Fund Profits",
+					"cny":"CNY Fund Profits"
+				},
+				"createLabel":"New",
+				"createOrEditLabel":"New or edit"
+			},
+			"delete":{
+				"question":"Are you sure you want to delete record {{ id }}?"
+			},
+			"detail":{
+				"title":"Fund Profit"
+			},
+			"creationDate":"Date",
+			"code":"Code",
+			"name":"Name",
+			"quantity":"Quantity",
+			"buyPrice":"Buy Price",
+			"sellPrice":"Sell Price",
+			"buyTransactionFee":"Buy Fee",
+			"sellTransactionFee":"Sell Fee",
+			"buyConsideration":"Buy Consideration",
+			"sellConsideration":"Sell Consideration",
+			"profit":"Profit",
+			"currency":"Currency",
+			"currencyOption":{
+				"HKD":"HKD",
+				"CNY":"CNY"
+			},
+			"market":"Market",
+			"marketOption":{
+				"HK":"Hong Kong",
+				"SZ":"Shen Zhen",
+				"SH":"Shang Hai"
+			},
+			"user":"user"
+		}
+		
+	}
+}
