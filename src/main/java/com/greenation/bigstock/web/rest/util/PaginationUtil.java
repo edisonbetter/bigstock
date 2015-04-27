@@ -3,6 +3,7 @@ package com.greenation.bigstock.web.rest.util;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort.Direction;
 import org.springframework.http.HttpHeaders;
 
 import java.net.URI;
@@ -34,6 +35,16 @@ public class PaginationUtil {
             limit = DEFAULT_LIMIT;
         }
         return new PageRequest(offset - 1, limit);
+    }
+    
+    public static Pageable generatePageRequest(Integer offset, Integer limit, Direction direction, String property) {
+        if (offset == null || offset < MIN_OFFSET) {
+            offset = DEFAULT_OFFSET;
+        }
+        if (limit == null || limit > MAX_LIMIT) {
+            limit = DEFAULT_LIMIT;
+        }
+        return new PageRequest(offset - 1, limit, direction, property);
     }
 
     public static HttpHeaders generatePaginationHttpHeaders(Page page, String baseUrl, Integer offset, Integer limit)

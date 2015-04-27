@@ -11,6 +11,7 @@ import javax.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Sort.Direction;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -91,7 +92,7 @@ public class StockTradingProfitResource {
     public ResponseEntity<List<StockTradingProfit>> getAll(@RequestParam(value = "page" , required = false) Integer offset,
                                   @RequestParam(value = "per_page", required = false) Integer limit)
         throws URISyntaxException {
-        Page<StockTradingProfit> page = stockTradingProfitRepository.findAll(PaginationUtil.generatePageRequest(offset, limit));
+        Page<StockTradingProfit> page = stockTradingProfitRepository.findAll(PaginationUtil.generatePageRequest(offset, limit, Direction.DESC, "creationDate"));
         HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/stockTradingProfits", offset, limit);
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }

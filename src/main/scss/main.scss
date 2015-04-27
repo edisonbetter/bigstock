@@ -119,9 +119,14 @@ ul#strength {
  	opacity: 1;
 }
 
-.form-profit{
+.form-profit-win{
 	font-weight: bold;
 	color: green;
+}
+
+.form-profit-lose{
+	font-weight: bold;
+	color: red;
 }
 
 .table {
@@ -143,4 +148,10 @@ ul#strength {
     }
   }
  }
+ 
+ /*.table-striped {
+  > tbody > tr:nth-of-type(odd) {
+    background-color: $state-warning-bg;
+  }
+}*/
 /* end Profit Detail Form style*/

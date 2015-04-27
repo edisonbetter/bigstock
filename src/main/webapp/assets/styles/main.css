@@ -8668,19 +8668,19 @@ ul#strength {
   color: green;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/edisonyang\/Dev\/IDE\/STS\/sts-bundle\/stsws\/BigStock\/bigstock\/src\/main\/scss\/main\.scss}line{font-family:\00003122}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/edisonyang\/Dev\/IDE\/STS\/sts-bundle\/stsws\/BigStock\/bigstock\/src\/main\/scss\/main\.scss}line{font-family:\00003127}}
 .form-profit-lose {
   font-weight: bold;
   color: red;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/edisonyang\/Dev\/IDE\/STS\/sts-bundle\/stsws\/BigStock\/bigstock\/src\/main\/scss\/main\.scss}line{font-family:\00003127}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/edisonyang\/Dev\/IDE\/STS\/sts-bundle\/stsws\/BigStock\/bigstock\/src\/main\/scss\/main\.scss}line{font-family:\00003132}}
 .table {
   width: 100%;
   max-width: 100%;
   margin-bottom: 20px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/edisonyang\/Dev\/IDE\/STS\/sts-bundle\/stsws\/BigStock\/bigstock\/src\/main\/scss\/main\.scss}line{font-family:\00003136}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/edisonyang\/Dev\/IDE\/STS\/sts-bundle\/stsws\/BigStock\/bigstock\/src\/main\/scss\/main\.scss}line{font-family:\00003141}}
 .table > thead > tr > th,
 .table > thead > tr > td,
 .table > tbody > tr > th,
@@ -8693,4 +8693,9 @@ ul#strength {
   border-top: 1px solid #ddd;
 }
 
+ /*.table-striped {
+  > tbody > tr:nth-of-type(odd) {
+    background-color: $state-warning-bg;
+  }
+}*/
 /* end Profit Detail Form style*/
