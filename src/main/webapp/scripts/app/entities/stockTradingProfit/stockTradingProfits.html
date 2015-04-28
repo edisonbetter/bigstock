@@ -156,7 +156,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr class="ng-enter-stagger" ng-repeat="stockTradingProfit in stockTradingProfits">
+                <tr ng-animate="'animate'" class="ng-enter-stagger" ng-repeat="stockTradingProfit in stockTradingProfits">
                     <td>{{stockTradingProfit.creationDate}}</td>
                     <td>{{stockTradingProfit.code}}</td>
                     <td>{{stockTradingProfit.name}}</td>

@@ -8699,3 +8699,75 @@ ul#strength {
   }
 }*/
 /* end Profit Detail Form style*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/edisonyang\/Dev\/IDE\/STS\/sts-bundle\/stsws\/BigStock\/bigstock\/src\/main\/scss\/main\.scss}line{font-family:\00003159}}
+.animate-enter,
+.animate-leave {
+  -webkit-transition: 400ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;
+  -moz-transition: 400ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;
+  -ms-transition: 400ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;
+  -o-transition: 400ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;
+  transition: 400ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;
+  position: relative;
+  display: block;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/edisonyang\/Dev\/IDE\/STS\/sts-bundle\/stsws\/BigStock\/bigstock\/src\/main\/scss\/main\.scss}line{font-family:\00003171}}
+.animate-enter.animate-enter-active,
+.animate-leave {
+  opacity: 1;
+  top: 0;
+  height: 30px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/edisonyang\/Dev\/IDE\/STS\/sts-bundle\/stsws\/BigStock\/bigstock\/src\/main\/scss\/main\.scss}line{font-family:\00003178}}
+.animate-leave.animate-leave-active,
+.animate-enter {
+  opacity: 0;
+  top: -50px;
+  height: 0px;
+}
+
+/**/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/edisonyang\/Dev\/IDE\/STS\/sts-bundle\/stsws\/BigStock\/bigstock\/src\/main\/scss\/main\.scss}line{font-family:\00003186}}
+.repeat-animation.ng-enter,
+.repeat-animation.ng-leave,
+.repeat-animation.ng-move {
+  -webkit-transition: all linear 1s;
+  -moz-transition: all linear 1s;
+  -o-transition: all linear 1s;
+  transition: all linear 1s;
+  position: relative;
+  left: 5px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/edisonyang\/Dev\/IDE\/STS\/sts-bundle\/stsws\/BigStock\/bigstock\/src\/main\/scss\/main\.scss}line{font-family:\00003197}}
+.repeat-animation.ng-enter {
+  opacity: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/edisonyang\/Dev\/IDE\/STS\/sts-bundle\/stsws\/BigStock\/bigstock\/src\/main\/scss\/main\.scss}line{font-family:\00003200}}
+.repeat-animation.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/edisonyang\/Dev\/IDE\/STS\/sts-bundle\/stsws\/BigStock\/bigstock\/src\/main\/scss\/main\.scss}line{font-family:\00003203}}
+.repeat-animation.ng-leave {
+  opacity: 1;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/edisonyang\/Dev\/IDE\/STS\/sts-bundle\/stsws\/BigStock\/bigstock\/src\/main\/scss\/main\.scss}line{font-family:\00003206}}
+.repeat-animation.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/edisonyang\/Dev\/IDE\/STS\/sts-bundle\/stsws\/BigStock\/bigstock\/src\/main\/scss\/main\.scss}line{font-family:\00003209}}
+.repeat-animation.ng-move {
+  left: 2px;
+  opacity: 0.5;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/edisonyang\/Dev\/IDE\/STS\/sts-bundle\/stsws\/BigStock\/bigstock\/src\/main\/scss\/main\.scss}line{font-family:\00003213}}
+.repeat-animation.ng-move.ng-move-active {
+  left: 0;
+  opacity: 1;
+}

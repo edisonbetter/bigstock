@@ -4,23 +4,23 @@
             <span class="hipster img-responsive img-rounded"></span>
         </div>
         <div class="col-md-8">
-            <h1 translate="main.title">Welcome, Java Hipster!</h1>
+            <h1 translate="main.title">Welcome, Edison Yang!</h1>
             <p class="lead" translate="main.subtitle">This is your homepage</p>
 
             <div ng-switch="isAuthenticated()">
                 <div class="row" ng-switch-when="true">
                 	<div class="col-sm-4">
                 		<dl>
-                			<dt>CNY Total Profits</dt>
+                			<dt>CNY Total Profits</a></dt>
                 			<dd class="lead" ng-class="{true:'form-profit-win', false:'form-profit-lose'}[tradingProfit.cnyProfits>=0]">{{tradingProfit.cnyProfits}}</dd>
                 		</dl>
                 	</div>
                 	<div class="col-sm-4">
                 		<ul>
-                			<li><span>CNY Fund Profits</span>
+                			<li><span><a ui-sref="fundTradingProfitCNY">CNY Fund Profits</a></span>
                 				<span class="pull-right" ng-class="{true:'form-profit-win', false:'form-profit-lose'}[tradingProfit.cnyFundProfits>=0]">{{tradingProfit.cnyFundProfits}}</span>
                 			</li>
-                			<li><span>CNY Stock Profits</span>
+                			<li><span><a ui-sref="stockTradingProfitCNY">CNY Stock Profits</a></span>
                 				<span class="pull-right" ng-class="{true:'form-profit-win', false:'form-profit-lose'}[tradingProfit.cnyStockProfits>=0]">{{tradingProfit.cnyStockProfits}}</span>
                 			</li>
                 		</ul>
@@ -35,10 +35,10 @@
                 	</div>
                 	<div class="col-sm-4">
                 		<ul>
-                			<li><span>HKD Fund Profits</span>
+                			<li><span><a ui-sref="fundTradingProfitHKD">HKD Fund Profits</a></span>
                 				<span class="pull-right" ng-class="{true:'form-profit-win', false:'form-profit-lose'}[tradingProfit.hkdFundProfits>=0]">{{tradingProfit.hkdFundProfits}}</span>
                 			</li>
-                			<li><span>HKD Stock Profits</span>
+                			<li><span><a ui-sref="stockTradingProfitHKD">HKD Stock Profits</a></span>
                 				<span class="pull-right" ng-class="{true:'form-profit-win', false:'form-profit-lose'}[tradingProfit.hkdStockProfits>=0]">{{tradingProfit.hkdStockProfits}}</span>
                 			</li>
                 		</ul>
