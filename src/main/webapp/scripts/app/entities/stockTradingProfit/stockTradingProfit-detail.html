@@ -1,5 +1,137 @@
-
 <div>
+
+<div class="modal fade" id="saveStockTradingProfitModal" tabindex="-1" role="dialog" aria-labelledby="myStockTradingProfitLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form name="editForm" role="form"  novalidate ng-submit="save(stockTradingProfit.id)" show-validation>
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                            ng-click="clear()">&times;</button>
+                    <h4 class="modal-title" id="myStockTradingProfitLabel" translate="bigstockApp.stockTradingProfit.home.createOrEditLabel">Create or edit a StockTradingProfit</h4>
+                </div>
+                <div class="modal-body form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" translate="bigstockApp.stockTradingProfit.creationDate">CreationDate</label>
+                        <div class="col-sm-10">
+                        	<input type="date" class="form-control" name="creationDate" placeholder="yyyy-MM-dd"
+                               ng-model="stockTradingProfit.creationDate" required>
+			</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" translate="bigstockApp.stockTradingProfit.code">Code</label>
+                        <div class="col-sm-10">
+                        	<input type="text" class="form-control" name="code"
+                               ng-model="stockTradingProfit.code" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" translate="bigstockApp.stockTradingProfit.name">Name</label>
+                        <div class="col-sm-10">
+                        	<input type="text" class="form-control" name="name"
+                               ng-model="stockTradingProfit.name" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" translate="bigstockApp.stockTradingProfit.market">Market</label>
+                       	<div class="col-sm-10">
+                        	<select name="market" class="form-control" ng-model="stockTradingProfit.market" required>
+                        		<option value="Hong Kong" selected>{{"bigstockApp.stockTradingProfit.marketOption.HK" | translate }}</option>
+                        		<option value="Shen Zhen">{{"bigstockApp.stockTradingProfit.marketOption.SZ" | translate }}</option>
+                        		<option value="Shang Hai">{{"bigstockApp.stockTradingProfit.marketOption.SH" | translate }}</option>
+                        	</select>
+                     </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" translate="bigstockApp.stockTradingProfit.currency">Currency</label>
+                        <div class="col-sm-10">
+                         <select name="currency" class="form-control" ng-model="stockTradingProfit.currency" required>
+                        		<option value="HKD" selected>{{"bigstockApp.stockTradingProfit.currencyOption.HKD" | translate }}</option>
+                        		<option value="CNY">{{"bigstockApp.stockTradingProfit.currencyOption.CNY" | translate }}</option>
+                        	</select>
+                        </div>
+                               
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" translate="bigstockApp.stockTradingProfit.quantity">Quantity</label>
+                        <div class="col-sm-10">
+                         <input type="number" class="form-control" name="quantity"
+                                ng-model="stockTradingProfit.quantity" required>
+                        </div>
+                        <div ng-show="editForm.quantity.$invalid">
+                            <p class="help-block"
+                               ng-show="editForm.quantity.$error.number" translate="entity.validation.number">
+                                This field should be a number.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" translate="bigstockApp.stockTradingProfit.buyPrice">BuyPrice</label>
+                        <div class="col-sm-10">
+                        <input type="number" class="form-control" name="buyPrice"
+                               ng-model="stockTradingProfit.buyPrice" required>
+                        </div>
+                        <div ng-show="editForm.buyPrice.$invalid">
+                            <p class="help-block"
+                               ng-show="editForm.buyPrice.$error.number" translate="entity.validation.number">
+                                This field should be a number.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" translate="bigstockApp.stockTradingProfit.sellPrice">SellPrice</label>
+                        <div class="col-sm-10">
+                         <input type="number" class="form-control" name="sellPrice"
+                                ng-model="stockTradingProfit.sellPrice" required>
+			</div>
+                        <div ng-show="editForm.sellPrice.$invalid">
+                            <p class="help-block"
+                               ng-show="editForm.sellPrice.$error.number" translate="entity.validation.number">
+                                This field should be a number.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" translate="bigstockApp.stockTradingProfit.buyTransactionFee">BuyTransactionFee</label>
+                        <div class="col-sm-10">
+                         <input type="number" class="form-control" name="buyTransactionFee"
+                                ng-model="stockTradingProfit.buyTransactionFee" required>
+			</div>
+                        <div ng-show="editForm.buyTransactionFee.$invalid">
+                            <p class="help-block"
+                               ng-show="editForm.buyTransactionFee.$error.number" translate="entity.validation.number">
+                                This field should be a number.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" translate="bigstockApp.stockTradingProfit.sellTransactionFee">SellTransactionFee</label>
+                        <div class="col-sm-10">
+                         <input type="number" class="form-control" name="sellTransactionFee"
+                                ng-model="stockTradingProfit.sellTransactionFee" required>
+			</div>
+                        <div ng-show="editForm.sellTransactionFee.$invalid">
+                            <p class="help-block"
+                               ng-show="editForm.sellTransactionFee.$error.number" translate="entity.validation.number">
+                                This field should be a number.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                        <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                    </button>
+                    <button type="submit" ng-disabled="editForm.$invalid" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 	<h2>
 		{{stockTradingProfit.name}}
 		<button type="submit" ng-click="update(stockTradingProfit.id)"
@@ -22,7 +154,7 @@
 						translate="bigstockApp.stockTradingProfit.creationDate">CreationDate</span>
 					</td>
 					<td><input type="text" class="input-sm form-control"
-						value="{{stockTradingProfit.creationDate}}" readonly></td>
+						value="{{stockTradingProfit.creationDate | date:'yyyy-MM-dd'}}" readonly></td>
 					<td><span translate="bigstockApp.stockTradingProfit.code">Code</span>
 					</td>
 					<td><input type="text" class="input-sm form-control"

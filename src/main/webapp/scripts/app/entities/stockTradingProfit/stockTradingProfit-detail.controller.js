@@ -2,10 +2,11 @@
 
 angular.module('bigstockApp')
     .controller('StockTradingProfitDetailController', function ($scope, $stateParams, $window, StockTradingProfit, User) {
-        $scope.stockTradingProfit = {};
+    	$scope.stockTradingProfit = {};
         $scope.load = function (id) {
             StockTradingProfit.all.get({id: id}, function(result) {
               $scope.stockTradingProfit = result;
+              $scope.stockTradingProfit.creationDate = new Date($scope.stockTradingProfit.creationDate);
             });
         };
         $scope.load($stateParams.id);
@@ -28,9 +29,18 @@ angular.module('bigstockApp')
         $scope.update = function (id) {
             StockTradingProfit.all.get({id: id}, function(result) {
                 $scope.stockTradingProfit = result;
+                $scope.stockTradingProfit.creationDate = new Date($scope.stockTradingProfit.creationDate);
                 $('#saveStockTradingProfitModal').modal('show');
             });
         };
+        
+        
+        $scope.save = function(id){
+	    	 StockTradingProfit.all.update($scope.stockTradingProfit,
+             function () {
+                 $('#saveStockTradingProfitModal').modal('hide');
+             });
+        }
         
         $scope.goBack = function(){
         	$window.history.back();
