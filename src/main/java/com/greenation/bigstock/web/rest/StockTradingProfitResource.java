@@ -26,6 +26,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.codahale.metrics.annotation.Timed;
 import com.greenation.bigstock.domain.StockTradingProfit;
 import com.greenation.bigstock.repository.StockTradingProfitRepository;
+import com.greenation.bigstock.security.SecurityUtils;
 import com.greenation.bigstock.service.ProfitService;
 import com.greenation.bigstock.web.rest.util.PaginationUtil;
 
@@ -55,6 +56,7 @@ public class StockTradingProfitResource {
         if (stockTradingProfit.getId() != null) {
             return ResponseEntity.badRequest().header("Failure", "A new stockTradingProfit cannot already have an ID").build();
         }
+        stockTradingProfit.setUser(SecurityUtils.getCurrentLogin());
         stockTradingProfitRepository.save(stockTradingProfit);
         updateTotalProfit(stockTradingProfit);
         return ResponseEntity.created(new URI("/api/stockTradingProfits/" + stockTradingProfit.getId())).build();

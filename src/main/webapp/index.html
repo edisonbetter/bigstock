@@ -12,6 +12,7 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css assets/styles/vendor.css -->
         <!-- bower:css -->
+        <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:css assets/styles/main.css -->
@@ -25,7 +26,7 @@
         <div ng-show="{{ENV === 'dev'}}" class="development" ng-cloak=""></div>
         <div ui-view="navbar" ng-cloak=""></div>
         <div class="container">
-            <div class="well" ui-view="content"></div>
+            <div class="well mainContent" ui-view="content"></div>
 
             <div class="footer">
                 <p translate="footer">Copyright © 2015</p>

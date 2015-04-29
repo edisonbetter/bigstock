@@ -17,11 +17,7 @@ angular.module('bigstockApp')
         };
         $scope.loadAll();
 
-        $scope.create = function () {
-        	Principal.identity().then(function(account) {
-        		$scope.stockTradingProfit.username=account.login;
-        	});
-        	
+        $scope.create = function () {        	
             StockTradingProfit.all.update($scope.stockTradingProfit,
                 function () {
                     $scope.loadAll();

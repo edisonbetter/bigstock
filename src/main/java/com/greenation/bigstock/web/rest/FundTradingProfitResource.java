@@ -27,6 +27,7 @@ import com.codahale.metrics.annotation.Timed;
 import com.greenation.bigstock.domain.FundTradingProfit;
 import com.greenation.bigstock.domain.StockTradingProfit;
 import com.greenation.bigstock.repository.FundTradingProfitRepository;
+import com.greenation.bigstock.security.SecurityUtils;
 import com.greenation.bigstock.service.ProfitService;
 import com.greenation.bigstock.web.rest.util.PaginationUtil;
 
@@ -56,6 +57,7 @@ public class FundTradingProfitResource {
         if (fundTradingProfit.getId() != null) {
             return ResponseEntity.badRequest().header("Failure", "A new fundTradingProfit cannot already have an ID").build();
         }
+        fundTradingProfit.setUser(SecurityUtils.getCurrentLogin());
         fundTradingProfitRepository.save(fundTradingProfit);
         updateTotalProfit(fundTradingProfit);
         return ResponseEntity.created(new URI("/api/fundTradingProfits/" + fundTradingProfit.getId())).build();
