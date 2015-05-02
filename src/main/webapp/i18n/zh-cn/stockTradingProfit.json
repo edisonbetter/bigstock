@@ -1,31 +1,45 @@
 {
-    "bigstockApp": {
-        "stockTradingProfit" : {
-            "home": {
-                "title": "StockTradingProfits",
-                "createLabel": "Create a new StockTradingProfit",
-                "createOrEditLabel": "Create or edit a StockTradingProfit"
-            },
-            "delete": {
-                "question": "Are you sure you want to delete StockTradingProfit {{ id }}?"
-            },
-            "detail": {
-                "title": "StockTradingProfit"
-            },
-            "creationDate": "CreationDate",
-            "code": "Code",
-            "name": "Name",
-            "quantity": "Quantity",
-            "buyPrice": "BuyPrice",
-            "sellPrice": "SellPrice",
-            "buyTransactionFee": "BuyTransactionFee",
-            "sellTransactionFee": "SellTransactionFee",
-            "buyConsideration": "BuyConsideration",
-            "sellConsideration": "SellConsideration",
-            "profit": "Profit",
-            "currency": "Currency",
-            "market": "Market",
-            "user": "user"
-        }
-    }
+	"bigstockApp":{
+		"stockTradingProfit":{
+			"home":{
+				"title":{
+					"all":"所有股票收益",
+					"hkd":"股票收益-港币",
+					"cny":"股票收益-人民币"
+				},
+				"createLabel":"录入",
+				"createOrEditLabel":"New or edit"
+			},
+			"delete":{
+				"question":"确认删除条目 {{ id }}?"
+			},
+			"detail":{
+				"title":"股票收益明细"
+			},
+			"creationDate":"日期",
+			"code":"代码",
+			"name":"名称",
+			"quantity":"数量",
+			"buyPrice":"买入价格",
+			"sellPrice":"卖出价格",
+			"buyTransactionFee":"买入手续费",
+			"sellTransactionFee":"卖出手续费",
+			"buyConsideration":"买入总计",
+			"sellConsideration":"卖出总计",
+			"profit":"收益",
+			"currency":"币种",
+			"currencyOption":{
+				"HKD":"港币",
+				"CNY":"人民币"
+			},
+			"market":"市场",
+			"marketOption":{
+				"HK":"香港",
+				"SZ":"深圳",
+				"SH":"上海"
+			},
+			"user":"user"
+		}
+		
+	}
 }

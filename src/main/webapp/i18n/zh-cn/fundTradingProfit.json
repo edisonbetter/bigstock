@@ -3,40 +3,40 @@
 		"fundTradingProfit":{
 			"home":{
 				"title":{
-					"all":"All Fund Profits",
-					"hkd":"HKD Fund Profits",
-					"cny":"CNY Fund Profits"
+					"all":"所有基金收益",
+					"hkd":"基金收益-港币",
+					"cny":"基金收益-人民币"
 				},
-				"createLabel":"New",
+				"createLabel":"录入",
 				"createOrEditLabel":"New or edit"
 			},
 			"delete":{
-				"question":"Are you sure you want to delete record {{ id }}?"
+				"question":"确认删除条目 {{ id }}?"
 			},
 			"detail":{
-				"title":"Fund Profit"
+				"title":"基金收益明细"
 			},
-			"creationDate":"Date",
-			"code":"Code",
-			"name":"Name",
-			"quantity":"Quantity",
-			"buyPrice":"Buy Price",
-			"sellPrice":"Sell Price",
-			"buyTransactionFee":"Buy Fee",
-			"sellTransactionFee":"Sell Fee",
-			"buyConsideration":"Buy Consideration",
-			"sellConsideration":"Sell Consideration",
-			"profit":"Profit",
-			"currency":"Currency",
+			"creationDate":"日期",
+			"code":"代码",
+			"name":"名称",
+			"quantity":"数量",
+			"buyPrice":"买入价格",
+			"sellPrice":"卖出价格",
+			"buyTransactionFee":"买入手续费",
+			"sellTransactionFee":"卖出手续费",
+			"buyConsideration":"买入总计",
+			"sellConsideration":"卖出总计",
+			"profit":"收益",
+			"currency":"币种",
 			"currencyOption":{
-				"HKD":"HKD",
-				"CNY":"CNY"
+				"HKD":"港币",
+				"CNY":"人民币"
 			},
-			"market":"Market",
+			"market":"市场",
 			"marketOption":{
-				"HK":"Hong Kong",
-				"SZ":"Shen Zhen",
-				"SH":"Shang Hai"
+				"HK":"香港",
+				"SZ":"深圳",
+				"SH":"上海"
 			},
 			"user":"user"
 		}

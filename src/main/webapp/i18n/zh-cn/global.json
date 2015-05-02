@@ -8,6 +8,18 @@
                 "main": "Entities",
                 "additionalEntity": "JHipster will add addtional entities"
             },
+            "stocks": {
+            	"main": "股票",
+            	"all": "所有股票",	
+            	"hk": "香港股票",
+            	"cn": "中国股票"
+            },
+            "funds": {
+            	"main": "基金",	
+            	"all": "所有基金",
+            	"hk": "香港基金",
+            	"cn": "中国基金"
+            },
             "account": {
                 "main": "账号",
                 "settings": "设置",
