@@ -5,8 +5,9 @@ angular.module('bigstockApp')
         $scope.fundTradingProfits = [];
         $scope.tableTitle="bigstockApp.fundTradingProfit.home.title.all";
         $scope.page = 1;
+        $scope.perPage = 10;
         $scope.loadAll = function() {
-            FundTradingProfit.all.query({page: $scope.page, per_page: 20}, function(result, headers) {
+            FundTradingProfit.all.query({page: $scope.page, per_page: $scope.perPage}, function(result, headers) {
                 $scope.links = ParseLinks.parse(headers('link'));
                 $scope.fundTradingProfits = result;
             });

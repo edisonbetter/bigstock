@@ -8665,13 +8665,13 @@ ul#strength {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/edisonyang\/Dev\/IDE\/STS\/sts-bundle\/stsws\/BigStock\/bigstock\/src\/main\/scss\/main\.scss}line{font-family:\00003122}}
 .form-profit-win {
   font-weight: bold;
-  color: green;
+  color: red;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/edisonyang\/Dev\/IDE\/STS\/sts-bundle\/stsws\/BigStock\/bigstock\/src\/main\/scss\/main\.scss}line{font-family:\00003127}}
 .form-profit-lose {
   font-weight: bold;
-  color: red;
+  color: green;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/edisonyang\/Dev\/IDE\/STS\/sts-bundle\/stsws\/BigStock\/bigstock\/src\/main\/scss\/main\.scss}line{font-family:\00003132}}
@@ -8701,15 +8701,14 @@ ul#strength {
 /* end Profit Detail Form style*/
 /**/
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/edisonyang\/Dev\/IDE\/STS\/sts-bundle\/stsws\/BigStock\/bigstock\/src\/main\/scss\/main\.scss}line{font-family:\00003161}}
-.animate.ng-enter,
-.animate.ng-leave {
-  -webkit-animation: bounceIn 1s;
-  -moz-animation: bounceIn 1s;
-  -ms-animation: bounceIn 1s;
-  animation: bounceIn 1s;
+.animate.ng-enter {
+  -webkit-animation: fadeInUp 1s;
+  -moz-animation: fadeInUp 1s;
+  -ms-animation: fadeInUp 1s;
+  animation: fadeInUp 1s;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/edisonyang\/Dev\/IDE\/STS\/sts-bundle\/stsws\/BigStock\/bigstock\/src\/main\/scss\/main\.scss}line{font-family:\00003170}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/edisonyang\/Dev\/IDE\/STS\/sts-bundle\/stsws\/BigStock\/bigstock\/src\/main\/scss\/main\.scss}line{font-family:\00003169}}
 .mainContent.ng-enter {
   -webkit-animation: flipInX 1s;
   -moz-animation: flipInX 1s;

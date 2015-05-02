@@ -6,6 +6,8 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.greenation.bigstock.domain.util.CustomLocalDateSerializer;
 import com.greenation.bigstock.domain.util.ISO8601LocalDateDeserializer;
 
+import org.beanio.annotation.Field;
+import org.beanio.annotation.Record;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.annotations.Type;
@@ -17,6 +19,7 @@ import javax.validation.constraints.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import java.util.Objects;
 
@@ -26,10 +29,12 @@ import java.util.Objects;
 @Entity
 @Table(name="STOCK_TRADING_PROFIT")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+@Record
 public class StockTradingProfit extends TradingProfit implements Serializable {
 
 	@NotNull
     @Column(name = "market", nullable = false)
+	@Field(at=11)
     private String market;
 	
 	public String getMarket() {
@@ -40,7 +45,13 @@ public class StockTradingProfit extends TradingProfit implements Serializable {
         this.market = market;
     }
 
-    @Override
+	public static List<String> getCSVHeader() {
+    	List<String> header = TradingProfit.getCSVHeader();
+    	header.add("market");
+		return header;
+	}
+
+	@Override
     public boolean equals(Object o) {
         if (this == o) {
             return true;

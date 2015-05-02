@@ -121,12 +121,12 @@ ul#strength {
 
 .form-profit-win{
 	font-weight: bold;
-	color: green;
+	color: red;
 }
 
 .form-profit-lose{
 	font-weight: bold;
-	color: red;
+	color: green;
 }
 
 .table {
@@ -158,13 +158,12 @@ ul#strength {
 
 
 /**/
-.animate.ng-enter, 
-.animate.ng-leave
+.animate.ng-enter
 { 
-    -webkit-animation: bounceIn 1s;
-    -moz-animation: bounceIn 1s;
-    -ms-animation: bounceIn 1s;
-    animation: bounceIn 1s;
+    -webkit-animation: fadeInUp 1s;
+    -moz-animation: fadeInUp 1s;
+    -ms-animation: fadeInUp 1s;
+    animation: fadeInUp 1s;
 }
 
 .mainContent.ng-enter

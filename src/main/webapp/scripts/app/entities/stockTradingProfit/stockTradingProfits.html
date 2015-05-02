@@ -166,7 +166,7 @@
                     <td>{{stockTradingProfit.sellPrice}}</td>
                     <td>{{stockTradingProfit.buyTransactionFee}}</td>
                     <td>{{stockTradingProfit.sellTransactionFee}}</td>
-                    <td ng-class="{true:'text-success', false:'text-danger'}[stockTradingProfit.profit>=0]"><strong>{{stockTradingProfit.profit}}</strong></td>
+                    <td ng-class="{true:'form-profit-win', false:'form-profit-lose'}[stockTradingProfit.profit>=0]"><strong>{{stockTradingProfit.profit}}</strong></td>
                     <td>
                         <button type="submit"
                                 ui-sref="stockTradingProfitDetail({id:stockTradingProfit.id})"

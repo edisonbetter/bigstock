@@ -166,7 +166,7 @@
                     <td>{{fundTradingProfit.sellPrice}}</td>
                     <td>{{fundTradingProfit.buyTransactionFee}}</td>
                     <td>{{fundTradingProfit.sellTransactionFee}}</td>
-                    <td ng-class="{true:'text-success', false:'text-danger'}[fundTradingProfit.profit>=0]"><strong>{{fundTradingProfit.profit}}</strong></td>
+                    <td ng-class="{true:'form-profit-win', false:'form-profit-lose'}[fundTradingProfit.profit>=0]"><strong>{{fundTradingProfit.profit}}</strong></td>
                     <td>
                         <button type="submit"
                                 ui-sref="fundTradingProfitDetail({id:fundTradingProfit.id})"
