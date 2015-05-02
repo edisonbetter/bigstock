@@ -58,7 +58,7 @@ public class StockTradingProfitResource {
         }
         stockTradingProfit.setUser(SecurityUtils.getCurrentLogin());
         stockTradingProfitRepository.save(stockTradingProfit);
-        updateTotalProfit(stockTradingProfit);
+        addToTotalProfit(stockTradingProfit);
         return ResponseEntity.created(new URI("/api/stockTradingProfits/" + stockTradingProfit.getId())).build();
     }
 
@@ -74,14 +74,17 @@ public class StockTradingProfitResource {
         if (stockTradingProfit.getId() == null) {
             return create(stockTradingProfit);
         }
-        stockTradingProfitRepository.save(stockTradingProfit);
         updateTotalProfit(stockTradingProfit);
+        stockTradingProfitRepository.save(stockTradingProfit);
         return ResponseEntity.ok().build();
     }
     
+    private void addToTotalProfit(StockTradingProfit stockTradingProfit){
+    	profitService.addToTotalProfits("Stock", stockTradingProfit);
+    }
     
     private void updateTotalProfit(StockTradingProfit stockTradingProfit){
-    	profitService.updateTotalProfits("Stock", stockTradingProfit.getCurrency(), stockTradingProfit.getProfit());
+    	profitService.updateTotalProfits("Stock", stockTradingProfit);
     }
 
     /**

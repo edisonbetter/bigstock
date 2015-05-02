@@ -175,7 +175,7 @@ public abstract class TradingProfit extends BaseEntity{
     }
 
     public void setProfit(BigDecimal profit) {
-        this.profit = sellPrice.subtract(buyPrice).multiply(quantity).subtract(buyTransactionFee).subtract(sellTransactionFee);
+        this.profit = calculateProfit();
     }
 
     public String getCurrency() {
@@ -192,6 +192,11 @@ public abstract class TradingProfit extends BaseEntity{
 
     public void setUser(String username) {
         this.username = username;
+    }
+    
+    public BigDecimal calculateProfit(){
+    	BigDecimal profit = sellPrice.subtract(buyPrice).multiply(quantity).subtract(buyTransactionFee).subtract(sellTransactionFee);
+    	return profit;
     }
     
     public static List<String> getCSVHeader(){

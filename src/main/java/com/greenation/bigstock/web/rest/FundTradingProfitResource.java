@@ -59,7 +59,7 @@ public class FundTradingProfitResource {
         }
         fundTradingProfit.setUser(SecurityUtils.getCurrentLogin());
         fundTradingProfitRepository.save(fundTradingProfit);
-        updateTotalProfit(fundTradingProfit);
+        addToTotalProfit(fundTradingProfit);
         return ResponseEntity.created(new URI("/api/fundTradingProfits/" + fundTradingProfit.getId())).build();
     }
 
@@ -75,13 +75,17 @@ public class FundTradingProfitResource {
         if (fundTradingProfit.getId() == null) {
             return create(fundTradingProfit);
         }
-        fundTradingProfitRepository.save(fundTradingProfit);
         updateTotalProfit(fundTradingProfit);
+        fundTradingProfitRepository.save(fundTradingProfit);
         return ResponseEntity.ok().build();
+    }
+
+    private void addToTotalProfit(FundTradingProfit fundTradingProfit){
+    	profitService.addToTotalProfits("Fund", fundTradingProfit);
     }
     
     private void updateTotalProfit(FundTradingProfit fundTradingProfit){
-    	profitService.updateTotalProfits("Fund", fundTradingProfit.getCurrency(), fundTradingProfit.getProfit());
+    	profitService.updateTotalProfits("Fund", fundTradingProfit);
     }
 
     /**
